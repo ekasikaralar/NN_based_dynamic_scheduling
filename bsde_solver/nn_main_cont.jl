@@ -27,7 +27,7 @@ MINS_IN_HOUR = 60 # number of minutes in an hour
 NUMBER_HOUR = neural_network_params["HOURS"] # the length of the time horizon in hours
 PRECISION = neural_network_params["PRECISION"] # the length of the time intervals (5 minute precision)
 
-# TOTAL_TIME = NUMBER_HOUR * MINS_IN_HOUR/PRECISION
+# TOTAL_TIME = NUMBER_HOUR * MINS_IN_HOUR // PRECISION
 TOTAL_TIME = neural_network_params["TOTAL_TIME"] # the length of the time horizon in terms of precision
 
 DIM = neural_network_params["DIM"] # the dimension of the problem
@@ -46,7 +46,7 @@ VALID_SIZE = neural_network_params["VALID_SIZE"] # size of the validation batch
 # piecewise decay learning rates
 
 LEARNING_RATES = neural_network_params["LEARNING_RATES"] # the learning rates
-DECAY_RATES = neural_network_params["DECAY_RATES"] # the steps to decay the learning rates
+DECAY_STEPS = neural_network_params["DECAY_STEPS"] # the steps to decay the learning rates
 
 # system parameters
 
@@ -72,28 +72,26 @@ SIGMA = COVAR_MULTIPLIER .* sqrt.(2 * LAMBD) # diffusion coefficient
 DELTA_T = TOTAL_TIME / NUM_TIME_INTERVAL
 SQRT_DELTA_T = sqrt(DELTA_T)
 
-# for random behavior policy
+# helper function for random behavior policy
 
 DIRICHLET = Dirichlet(ones(DIM))
 
-# activation function
+# activation function -- leaky relu with a constant of 0.2
 
 function leakyrelu_manual(x)
     leakyrelu(x, 0.2)
 end
 
 """
-`createDeepNNChain(dim, layers, units, activation, output_units, output_activation, bias)`
+`createDeepNNChain(dim, units, activation, output_units, output_activation)`
 Creates a deep neural network chain with the specified configuration.
 
 # Arguments
 - `dim::Int`: Input dimension.
-- `layers::Int`: Number of hidden layers.
 - `units::Int`: Number of units in each hidden layer.
 - `activation`: Activation function for the hidden layers.
 - `output_units::Int`: Number of units in the output layer.
 - `output_activation`: Activation function for the output layer.
-- `bias::Bool`: Whether to include bias in the output layer.
 
 # Returns
 - `Chain`: A Flux Chain representing the neural network.
@@ -297,8 +295,8 @@ for step in 0:NUM_ITERATIONS
     elapsed_time = peektimer()
     
     # adjusting the learning rate
-    for rate in 1:length(DECAY_RATES)
-        if step == DECAY_RATES[rate]
+    for rate in 1:length(DECAY_STEPS)
+        if step == DECAY_STEPS[rate]
             Flux.adjust!(opt_state, LEARNING_RATES[rate+1])
         end
     end
