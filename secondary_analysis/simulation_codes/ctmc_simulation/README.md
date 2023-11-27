@@ -4,6 +4,8 @@
 
 This repository contains the source code for 2-dimensional and 3-dimensional continuous-time Markov chain (CTMC) simulations. It is implemented in C++ and utilizes OpenMP for parallel computation. The simulation is designed to model a call center (with the preemptive resume scheduling rule) where the solution of the associated CTMC determines optimal priority policy.  
 
+This solution is the benchmark policy for low dimensional test problems.
+
 ## Key Components
 - 'Simulation' Class: This class is responsible for setting up and running the simulation. It reads configuration settings from a JSON file.
 - 'Execute' Class: This class manages the core logic of the CTMC simulation, including handling different events and updating the system state based on the optimal priority rule determined by the CTMC solution.
@@ -17,17 +19,8 @@ This repository contains the source code for 2-dimensional and 3-dimensional con
 - 'main' Function: Creates a 'Simulation' object with the specified configuration file and runs the simulation.
 - Output: The 'save' method of the 'Simulation' class outputs the results to a CSV file, as specified by 'record_file'.
 
-## Event Handling
-The 'Execute' class includes methods to handle different events in the simulation: 
-- Arrival Events: 'handle_arrival_event' updates the system upon new arrivals.
-- Departure Events: 'handle_depart_event' manages departures from the system.
-- Abandonment Events: 'handle_abandon_event' handles situations where a customer leaves the queue before being served.
-
 ## Optimal Policy Calculation
-The simulation finds the optimal policies based on the current system state and time interval from an optimal policy matrix (which comes from the MATLAB code provided in the dp_low_dimensional folder). This is managed by 'optimal_policy_calculation'. We use the preemptive resume scheduling rule. Please refer to the dp_low_dimensional folder for how we determine the optimal policy given state and time interval.
-
-## Simulation Flow
-The 'run' method in the 'Execute' class determines the simulation flow, advancing time, and processing events accordingly. 
+The simulation finds the optimal policies based on the current system state and time interval from an optimal policy matrix. This is managed by the 'optimal_policy_calculation' function. We use the preemptive resume scheduling rule. Please refer to the [mdp_solution](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/mdp_solution ) folder for how we determine the optimal policy given state and time interval.
 
 ## Output
 The simulation calculates and outputs the costs incurred by customers waiting in the queue during a 17-hour daily operation at a call center. The num_iterations parameter determines the number of days simulated. We save the results to 'record_file'. 
@@ -37,7 +30,7 @@ The simulation calculates and outputs the costs incurred by customers waiting in
 ### Prerequisites
 - C++11 compiler (e.g., GCC, Clang)
 - CMake (version 3.20 or higher)
-- OpenMP
+- OpenMP for parallel processing 
 
 ### Structure
 - ctmc_sim.cpp: The main simulation code.
@@ -45,13 +38,6 @@ The simulation calculates and outputs the costs incurred by customers waiting in
 - CMakeLists.txt: CMake configuration file for building the project.
 
 ### Compilation and Running
-
-#### Clone the Repository
-To clone the repository, use the following command:
-```bash
-git clone [repository URL]
-cd [repository directory]
-```
 
 #### Build the Project
 Use CMake and Make to build the project:
