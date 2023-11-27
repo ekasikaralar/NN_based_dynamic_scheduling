@@ -2,8 +2,7 @@
 
 ## Overview
 
-The code is intended for the implementation of the deep neural network to solve the HJB equation in our stochastic control problem.
-It is structured to be used with a configuration file, 'config.json', which includes parameters for the neural network and the system describing the call center we are interested in.
+The code implements a deep neural network for solving the Hamilton-Jacobi-Bellman (HJB) equation in our stochastic control problem. It is structured for use with a configuration file 'config.json', which contains parameters for both the neural network and the system that describes the call center of interest.
 
 ## Prerequisites
 
