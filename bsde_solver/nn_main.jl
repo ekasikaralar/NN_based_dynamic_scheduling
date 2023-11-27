@@ -89,7 +89,7 @@ Creates a deep neural network chain with the specified configuration.
 
 # Arguments
 - `dim::Int`: Input dimension.
-- `units::Int`: Number of units in each hidden layer.
+- `units::Int`: Number of neurons in each hidden layer.
 - `activation`: Activation function for the hidden layers.
 - `output_units::Int`: Number of neurons in the output layer.
 - `output_activation`: Activation function for the output layer.
@@ -298,7 +298,7 @@ for step in 0:NUM_ITERATIONS
     end
     Flux.update!(opt_state, global_model, grads[1])
     
-    if step % 1 == 0
+    if step % PRINT_INTERVAL == 0
         println("Step: $step, Elapsed: $elapsed_time, Loss: $train_loss, Valid Loss: $valid_loss")
     end
     
