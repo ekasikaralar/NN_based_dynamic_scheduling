@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the source code for the discrete event simulations of the main test problem. It is implemented in C++ and utilizes OpenMP for parallel computation. The simulation is designed to model a call center (with the preemptive resume scheduling rule) where a specified static priority rule determines the priority of the classes.  
+This repository contains the source code for the discrete event simulations using a static priority rule. It is implemented in C++ and utilizes OpenMP for parallel computation. The simulation is designed to model a call center (with the preemptive resume scheduling rule) where a specified static priority rule determines the priority of the classes.  
 
 We use this code to determine the static priority benchmarks for the main test problem and the pathwise priority benchmark for the high dimensional test problems.
 
