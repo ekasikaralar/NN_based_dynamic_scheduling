@@ -424,8 +424,8 @@ namespace simulation {
 	double Execute::generate_interarrival(int& interval){	
 			const double conversionFactor = 12; //number of 5 minutes in an hour
 			double arrival_rate = lambda[interval]*conversionFactor; //hourly arrival rate
-    		std::exponential_distribution<double> interarrivalTimeDistribution(arrival_rate);
-    		return interarrivalTimeDistribution(generator);   
+    			std::exponential_distribution<double> interarrivalTimeDistribution(arrival_rate);
+    			return interarrivalTimeDistribution(generator);   
 	}
 
 	/**
@@ -436,8 +436,8 @@ namespace simulation {
  	*/
 	double Execute::generate_abandon(int& cls) {
 		double abandonment_rate = theta_hourly[cls]; //hourly abandonment rate
-    std::exponential_distribution<double> abandonmentDistribution(abandonment_rate);
-    return abandonmentDistribution(generator);
+    		std::exponential_distribution<double> abandonmentDistribution(abandonment_rate);
+    		return abandonmentDistribution(generator);
 	}
 
 	/**
@@ -715,14 +715,14 @@ namespace simulation {
 		
 		constexpr double MaxTime = std::numeric_limits<double>::max();
 
-		//removing the person who has abandoned from the system
+		//removing the person who has abandoned the system
 		num_in_system[0] -= 1; //how many people are in the system at time t - one left
 		num_in_system[class_abandon + 1] -=1; //how many people out of class i are in the system at time t -- one left
 		//increasing the cumulative number of abandons from the list
 		
 		num_abandons[0] += 1; //how many people have got their service completed so far by time t
 		num_abandons[class_abandon + 1] += 1; //how many class i arrivals have been completed by time t 
-		//decreasing the number of people from the queue
+		//decreasing the number of people in the queue
 
 		//removing the person who has abandoned from the queue
 		num_in_queue[0] -= 1;
@@ -769,7 +769,7 @@ namespace simulation {
 	    std::iota(indices.begin(), indices.end(), 0);
 	    std::sort(indices.begin(), indices.end(),
 	              [&array](int left, int right) -> bool {
-	                  // sort indices according to corresponding array element
+	                  // sort indices according to the corresponding array element
 	                  return array[left] < array[right];
 	              });
 	
@@ -979,17 +979,17 @@ namespace simulation {
 			//if the current event is an arrival
 			if (t_event == t_arrival) {
 				std::uniform_real_distribution<double> uniform(0.0, 1.0); //lookup seed 
-            	double arrival_seed = uniform(generator);
-            	auto low = std::lower_bound(arr_cdf[interval].begin(), arr_cdf[interval].end(), arrival_seed); //which class has arrived
+            			double arrival_seed = uniform(generator);
+            			auto low = std::lower_bound(arr_cdf[interval].begin(), arr_cdf[interval].end(), arrival_seed); //which class has arrived
 				int arrival_ind = low - arr_cdf[interval].begin();
 				//handle arrival event
-            	handle_arrival_event(interval, arrival_ind, pre_interval, post_interval);
+            			handle_arrival_event(interval, arrival_ind, pre_interval, post_interval);
 			
 			} 
 			//if the current event is a departure 
 			else if (t_event == t_depart) {
 				std::uniform_real_distribution<double> uniform(0.0, 1.0); //lookup seed 
-            	double departure_seed = uniform(generator);
+            			double departure_seed = uniform(generator);
 				std::vector<double> numerator(class_no, 0);
 				std::vector<double> temp(class_no, 0);
 				std::vector<double> ser_cdf;
@@ -1012,7 +1012,7 @@ namespace simulation {
 				}
 				auto low = std::lower_bound(ser_cdf.begin(), ser_cdf.end(), departure_seed); 
 				int service_ind = low - ser_cdf.begin();
-            	//handle service completion event - departure
+            			//handle service completion event - departure
 				handle_depart_event(interval, service_ind, pre_interval, post_interval);				
 			} 
 			//if the current event is an abandonment
@@ -1041,7 +1041,7 @@ int main(int argc, char** argv){
 	std::string record_file = "/project/Call_Center_Control/analyses_final/nn_simulations/nn_policy.csv";  
 
 	simulation::Simulation simObj(jsonFileName);
-    simObj.save(record_file);	
+    	simObj.save(record_file);	
 	
 	return 0;
 }
