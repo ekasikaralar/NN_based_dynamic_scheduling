@@ -1,0 +1,16 @@
+{
+	"precision": 5,
+	"total_discretization": 4080,
+	"hour_total": 17,
+	"overtimeCost": 2.12,
+	"upperBounds": [211,211,211],
+	"numIntervals": 612000,
+	"denominator": 150,
+	"lambda_class1_path": "project/Call_Center_Control/analyses_final/matlab/3dim/arrivals_class1_partial.csv",
+	"lambda_class2_path": "project/Call_Center_Control/analyses_final/matlab/3dim/arrivals_class2_partial.csv",
+    	"lambda_class3_path": "project/Call_Center_Control/analyses_final/matlab/3dim/arrivals_class3_partial.csv",
+	"agents_path": "project/Call_Center_Control/analyses_final/matlab/3dim/main_test_agents.csv",
+	"mu_path": "project/Call_Center_Control/analyses_final/matlab/3dim/mu_hourly_3dim.csv",
+	"theta_path": "project/Call_Center_Control/analyses_final/matlab/3dim/theta_hourly_3dim.csv",
+	"cost_path": "project/Call_Center_Control/analyses_final/matlab/3dim/hourly_total_cost_3dim.csv"
+}
