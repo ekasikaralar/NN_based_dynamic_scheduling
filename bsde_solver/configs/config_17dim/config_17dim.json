@@ -13,7 +13,7 @@
     "BATCH_SIZE": 256,
     "VALID_SIZE": 4096,
     "LEARNING_RATES": [1e-2, 1e-3, 5e-4, 1e-4, 5e-5, 1e-5],
-    "DECAY_RATES":[3750, 6000, 8000, 11000, 15000]
+    "DECAY_STEPS":[3750, 6000, 8000, 11000, 15000]
   },
   "system_parameters": {
     "MU_FILE": "mu_hourly_17dim.csv",
