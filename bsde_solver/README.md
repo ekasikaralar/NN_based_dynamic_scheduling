@@ -67,7 +67,7 @@ julia nn_main.jl
 
   ## Usage
 
-  1. Set up the OLD_NAME and RUN_NAME: OLD_NAME should match with the folder that contains the neural network weights and optimizer saved after the initial training. RUN_NAME should be the name of the continuation training.
+  1. Set up the OLD_NAME and RUN_NAME: OLD_NAME should match the name of the folder that contains the neural network weights and optimizer saved after the initial training. RUN_NAME should be the name of the folder for the continuation training.
   2. Run the Script: Execute the script in Julia as follows:
       
      ```bash
