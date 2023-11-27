@@ -222,10 +222,10 @@ namespace simulation {
 		cost_rate = cost_rate_;
 		num_interval = num_interval_;
 		upper = upper_;
-        decision_freq = decision_freq_;
+        	decision_freq = decision_freq_;
 		increment = increment_;
 
-      	generator.seed(seed);
+      		generator.seed(seed);
 		queue_init();
 
 	}
@@ -269,7 +269,7 @@ namespace simulation {
 	}
 
 	/**
-		 * Generates a random abandonment time based on an exponential distribution.
+		* Generates a random abandonment time based on an exponential distribution.
  		* 
  		* @param cls The class index used to select the abandonment rate from 'theta_hourly'.
  		* @return A randomly generated abandonment time.
@@ -376,7 +376,7 @@ namespace simulation {
 				}
 			}
 
-			//we adjust the number of people in service after all the changes
+		//we adjust the number of people in service after all the changes
      	 	num_in_service[0] = 0;
      	 	for (int i = 0; i < class_no; i++){
      	 		num_in_service[0] += num_in_service[i + 1];
@@ -599,7 +599,7 @@ namespace simulation {
 
     	// Update the next abandonment time
    		double min_abandon = *min_element(min_temp.begin(), min_temp.end());
-    	t_abandon = min_abandon;
+    		t_abandon = min_abandon;
 
     	// Find the class and customer index for the next potential abandonment
     	for (int i = 0; i < class_no; i++) {
@@ -746,16 +746,16 @@ namespace simulation {
 			//if the current event is an arrival
 			if (t_event == t_arrival) {
 				std::uniform_real_distribution<double> uniform(0.0, 1.0); //lookup seed 
-            	double arrival_seed = uniform(generator);
-            	auto low = std::lower_bound(arr_cdf[interval].begin(), arr_cdf[interval].end(), arrival_seed); //which class has arrived
+            			double arrival_seed = uniform(generator);
+            			auto low = std::lower_bound(arr_cdf[interval].begin(), arr_cdf[interval].end(), arrival_seed); //which class has arrived
 				int arrival_ind = low - arr_cdf[interval].begin();//handle arrival event
-            	handle_arrival_event(interval, arrival_ind, pre_interval, post_interval, optimal_policy_matrix);
+            			handle_arrival_event(interval, arrival_ind, pre_interval, post_interval, optimal_policy_matrix);
 			
 			} 
 			//if the current event is a departure 
 			else if (t_event == t_depart) {
 				std::uniform_real_distribution<double> uniform(0.0, 1.0); //lookup seed 
-            	double departure_seed = uniform(generator);
+            			double departure_seed = uniform(generator);
 				std::vector<double> numerator(class_no, 0);
 				std::vector<double> temp(class_no, 0);
 				std::vector<double> ser_cdf;
@@ -778,7 +778,7 @@ namespace simulation {
 				}
 				auto low = std::lower_bound(ser_cdf.begin(), ser_cdf.end(), departure_seed); 
 				int service_ind = low - ser_cdf.begin();
-            	//handle service completion event - departure
+            			//handle service completion event - departure
 				handle_depart_event(interval, service_ind, pre_interval, post_interval, optimal_policy_matrix);				
 			} 
 			//if the current event is an abandonment
@@ -807,7 +807,7 @@ int main(int argc, char** argv){
 	std::string record_file = "/project/Call_Center_Control/analyses_final/ctmc_benchmarks/2dim/2dim_ctmc_policy.csv";  
 
 	simulation::Simulation simObj(jsonFileName);
-    simObj.save(record_file);	
+    	simObj.save(record_file);	
 
 	return 0;
 }
