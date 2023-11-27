@@ -2,12 +2,12 @@
 
 ## Overview
 
-This MATLAB code solves the two-dimensional and three-dimensional continuous-time Markov chain (CTMC) models associated with the call center we are focusing on. It computes the optimal policy for a given system state and time interval.
+This MATLAB code solves the 2D and 3D continuous-time Markov chain (CTMC) models for our call center. It computes the optimal policy for a given system state and time.
 
 ## Key Features
 - Calculation of the value function V(X(t),t) and optimal policy for 2D and 3D CTMCs.
 - Use of JSON for configuration settings and data preprocessing steps.
-- Outputs policies and value functions at the intervals specified by the user for use in the simulation of the call center operations (please see the ctmc_simulation folder for the code used to simulate the optimal policy).
+- Outputs optimal policies and value functions at the intervals specified by the user for application in the simulation of the call center operations (please see the [ctmc_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/ctmc_simulation) folder for the code used to simulate the optimal policy).
 
 ### Function Descriptions
 'main' (main_2dim or main_3dim):
