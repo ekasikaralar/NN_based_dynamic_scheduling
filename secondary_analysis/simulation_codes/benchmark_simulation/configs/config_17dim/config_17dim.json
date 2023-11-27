@@ -1,0 +1,14 @@
+{
+  "class_no": 17,
+  "num_interval": 204,
+  "num_iterations":10000,
+  "lambda_path": "/project/Call_Center_Control/analyses_final/static_benchmark/main_test_total_arrivals_partial_5min.csv",
+  "agents_path": "/project/Call_Center_Control/analyses_final/static_benchmark/main_test_agents.csv",
+  "mu_hourly_path": "/project/Call_Center_Control/analyses_final/static_benchmark/mu_hourly_17dim.csv",
+  "theta_hourly_path": "/project/Call_Center_Control/analyses_final/static_benchmark/theta_hourly_17dim.csv",
+  "arr_cdf_path": "/project/Call_Center_Control/analyses_final/static_benchmark/cdf_17dim.csv",
+  "holding_cost_rate_path": "/project/Call_Center_Control/analyses_final/static_benchmark/hourly_holding_cost_17dim.csv",
+  "abandonment_cost_rate_path": "/project/Call_Center_Control/analyses_final/static_benchmark/abandonment_cost_17dim.csv",
+  "cost_rate_path": "/project/Call_Center_Control/analyses_final/static_benchmark/hourly_total_cost_17dim.csv",
+  "initialization_path": "/project/Call_Center_Control/analyses_final/static_benchmark/initialization_17dim.csv"
+}
