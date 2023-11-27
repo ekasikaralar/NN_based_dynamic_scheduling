@@ -429,7 +429,7 @@ namespace simulation {
 	}
 
 	/**
-		 * Generates a random abandonment time based on an exponential distribution.
+		* Generates a random abandonment time based on an exponential distribution.
  		* 
  		* @param cls The class index used to select the abandonment rate from 'theta_hourly'.
  		* @return A randomly generated abandonment time.
