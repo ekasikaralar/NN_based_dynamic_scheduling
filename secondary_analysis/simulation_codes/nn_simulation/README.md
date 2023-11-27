@@ -78,4 +78,4 @@ After building, run the simulation with:
 
 #### Configuration 
 The simulation is configured using a JSON file. Please edit the 'config.json' file to adjust parameters such as 'num_interval', 'num_iterations', 'decision_freq', etc. Also, please edit the 'record_file' to save the output.
-```
+
