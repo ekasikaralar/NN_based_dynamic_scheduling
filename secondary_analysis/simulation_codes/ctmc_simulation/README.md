@@ -51,6 +51,7 @@ make
 #### Run the Simulation
 After building, run the simulation with: 
 ```bash
+export OMP_THREAD_LIMIT=128
 ./prdes
 ```
 
