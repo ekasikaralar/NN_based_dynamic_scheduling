@@ -25,13 +25,13 @@ MINS_IN_HOUR = 60 # number of minutes in an hour
 NUMBER_HOUR = neural_network_params["HOURS"] # the length of the time horizon in hours
 PRECISION = neural_network_params["PRECISION"] # the length of the time intervals (5 minute precision)
 
-# TOTAL_TIME = NUMBER_HOUR * MINS_IN_HOUR/PRECISION
+# TOTAL_TIME = NUMBER_HOUR * MINS_IN_HOUR // PRECISION
 TOTAL_TIME = neural_network_params["TOTAL_TIME"] # the length of the time horizon in terms of precision
 
 DIM = neural_network_params["DIM"] # the dimension of the problem
 
 NUM_TIME_INTERVAL = neural_network_params["NUM_TIME_INTERVAL"] # number of neural networks to use (discretization scheme)
-PRINT_INTERVAL = neural_network_params["PRINT_INTERVAL"] # scaling factor to print the loss values
+PRINT_INTERVAL = neural_network_params["PRINT_INTERVAL"] # scaling factor to determine the intervals at which to print the loss values
 
 NUM_ITERATIONS = neural_network_params["NUM_ITERATIONS"] # number of neural network training iterations
 NUM_NEURONS = neural_network_params["NUM_NEURONS"] # number of neurons in each hidden layer
@@ -44,20 +44,22 @@ VALID_SIZE = neural_network_params["VALID_SIZE"] # size of the validation batch
 # piecewise decay learning rates
 
 LEARNING_RATES = neural_network_params["LEARNING_RATES"] # the learning rates
-DECAY_RATES = neural_network_params["DECAY_RATES"] # the steps to decay the learning rates
+DECAY_STEPS = neural_network_params["DECAY_STEPS"] # the steps to decay the learning rates
 
 # system parameters
 
 system_params = config["system_parameters"]
 
 SCALING_FACTOR = MINS_IN_HOUR // PRECISION
+
+# scale the system parameters according to the precision specified
 MU = Float32.(Matrix(CSV.read(system_params["MU_FILE"], DataFrame, header=0)) / SCALING_FACTOR) |> device # MU_FILE contains hourly service rates
 THETA = Float32.(Matrix(CSV.read(system_params["THETA_FILE"], DataFrame, header=0)) / SCALING_FACTOR) |> device # THETA_FILE contains hourly abandonment rates
 COST = Float32.(Matrix(CSV.read(system_params["COST_FILE"], DataFrame, header=0)) / SCALING_FACTOR) |> device # COST_FILE contains hourly cost rates
 LAMBD = Float32.(Matrix(CSV.read(system_params["LAMBD_FILE"], DataFrame, header=0)) / SCALING_FACTOR) |> device # LAMBD_FILE contains hourly limiting arrival rates
-ZETA = Float32.(Matrix(CSV.read(system_params["ZETA_FILE"], DataFrame, header=0)) / SCALING_FACTOR) |> device # ZETA_FILE contrains hourly second order term zetas
+ZETA = Float32.(Matrix(CSV.read(system_params["ZETA_FILE"], DataFrame, header=0)) / SCALING_FACTOR) |> device # ZETA_FILE contains hourly second order term zetas
 OVERTIME_COST = system_params["OVERTIME_COST"] # overtime cost rate to calculate the loss
-POLICY = system_params["POLICY"] # reference policy
+POLICY = system_params["POLICY"] # reference policy u 
 
 # repeating data based on the number of intervals 
 
@@ -71,26 +73,25 @@ SIGMA = COVAR_MULTIPLIER .* sqrt.(2 * LAMBD) # diffusion coefficient
 DELTA_T = TOTAL_TIME / NUM_TIME_INTERVAL
 SQRT_DELTA_T = sqrt(DELTA_T)
 
-# for random behavior policy
+# helper function for random behavior policy
 
 DIRICHLET = Dirichlet(ones(DIM))
 
-# activation function
+# activation function -- leaky relu with a constant of 0.2
 
 function leakyrelu_manual(x)
     leakyrelu(x, 0.2)
 end
 
 """
-`createDeepNNChain(dim, layers, units, activation, output_units, output_activation, bias)`
+`createDeepNNChain(dim, units, activation, output_units, output_activation)`
 Creates a deep neural network chain with the specified configuration.
 
 # Arguments
 - `dim::Int`: Input dimension.
-- `layers::Int`: Number of hidden layers.
 - `units::Int`: Number of units in each hidden layer.
 - `activation`: Activation function for the hidden layers.
-- `output_units::Int`: Number of units in the output layer.
+- `output_units::Int`: Number of neurons in the output layer.
 - `output_activation`: Activation function for the output layer.
 - `bias::Bool`: Whether to include bias in the output layer.
 
@@ -253,14 +254,14 @@ function loss_fn(model, a, dw, x, u, training=true)
     # Toggle model mode based on training flag
     training ? Flux.trainmode!(model) : Flux.testmode!(model)
 
-    # Compute model output
+    # Compute the model output
     y_terminal, negative_loss = model(a, dw, x, u)
 
     # Calculate loss components
     g_tf = OVERTIME_COST * max.(sum(x[:, end, :], dims=1), 0.0)
     delta = y_terminal - g_tf
 
-    # Final loss calculation
+    # Final loss calculation (loss + negative gradient penalty)
     return mean(delta .^ 2) + LAMBDA * negative_loss
 end
 
@@ -286,8 +287,8 @@ for step in 0:NUM_ITERATIONS
     elapsed_time = peektimer()
     
     # adjusting the learning rate
-    for rate in 1:length(DECAY_RATES)
-        if step == DECAY_RATES[rate]
+    for rate in 1:length(DECAY_STEPS)
+        if step == DECAY_STEPS[rate]
             Flux.adjust!(opt_state, LEARNING_RATES[rate+1])
         end
     end
