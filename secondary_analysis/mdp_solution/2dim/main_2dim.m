@@ -35,9 +35,9 @@ function config = defineConfig(configData)
     
     config.overtimeCost = configData.overtimeCost; % overtime cost rate
     config.upperBounds = configData.upperBounds; % upper bounds of the state space
-    config.numIntervals = configData.numIntervals; % number of intervals to discretize the time horizon
-    config.deltaT = configData.hour_total / config.numIntervals; % scaling factor
-    config.denominator = configData.denominator; % denominator we use to record the policy
+    config.numIntervals = configData.numIntervals; % number of intervals to discretize the time horizon % we consider 0.1 second intervals
+    config.deltaT = configData.hour_total / config.numIntervals; % length of the time horizons % we consider 0.1 second intervals
+    config.denominator = configData.denominator; % denominator we use to record the policy (determines for which time intervals we record the policy)
     config.num_states = config.upperBounds(1) * config.upperBounds(2); % the dimension of the state space
 end
 
@@ -63,6 +63,7 @@ function data = readAndPreprocessData(config, configData)
     data.lambdaClass2 = data.lambdaClass2 * CONVERSION_CONSTANT;
 
     %scale the system parameters with deltaT
+    %converting the units of the data based on the precision specified
     data.mu_scaled = data.mu * config.deltaT; % mu scaled with deltaT
     data.theta_scaled = data.theta * config.deltaT; % theta scaled with deltaT
     data.cost_scaled = data.cost * config.deltaT; % cost scaled with deltaT
