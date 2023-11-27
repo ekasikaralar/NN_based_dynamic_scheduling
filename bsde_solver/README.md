@@ -2,7 +2,7 @@
 
 ## Overview
 
-The code is intended for the implementation and training of the deep neural network to determine the optimal policy by solving the HJB equation in our stochastic control problem.
+The code is intended for the implementation of the deep neural network to solve the HJB equation in our stochastic control problem.
 It is structured to be used with a configuration file, 'config.json', which includes parameters for the neural network and the system describing the call center we are interested in.
 
 ## Prerequisites
@@ -38,13 +38,13 @@ The 'config.json' file should contain two primary sections:
 2. Parameter Initialization: Reads parameters from the configuration file.
 3. System Parameters: Reads system-related parameters and adjusts them according to the precision required.
 4. Neural Network Construction: Provides functions to create deep neural network chains with specific configurations.
-5. Model Definition: Defines 'NonsharedMode' struct, encapsulating the neural networks for estimating the value function and its gradient.
+5. Model Definition: Defines 'NonsharedModel' struct, encapsulating the neural networks for estimating the value function and its gradient.
 6. Sampling Function: Functions for generating training and validation samples.
 
 ## Usage
 
 1.  Set up Configuration File: Before running the code, please make sure that 'config.json' is correctly set up with all necessary parameters.
-2.  Set up the RUN_NAME: The main training code (nn_main.jl) has a RUN_NAME variable used to specify the name of the folder, where we save neural network weights at the end of the training. Please change the RUN_NAME according to your setting.
+2.  Set up the RUN_NAME: The main training code (nn_main.jl) has a RUN_NAME variable used to specify the folder name to save the neural network weights and the optimizer state at the end of the training. Please change the RUN_NAME according to your setting.
 4.  Run the Script: Execute the script in a Julia environment. Specifically, run the command: 
 
 ```bash
@@ -67,11 +67,11 @@ julia nn_main.jl
 
   ## Usage
 
-  1. Set up the OLD_NAME and RUN_NAME: OLD_NAME should match the name of the folder that contains the neural network weights and optimizer saved after the initial training. RUN_NAME should be the name of the folder for the continuation training.
+  1. Set up the OLD_NAME and RUN_NAME: OLD_NAME should match the folder name containing the neural network weights and optimizer saved after the initial training. RUN_NAME should be the name of the folder for the continuation training.
   2. Run the Script: Execute the script in Julia as follows:
       
      ```bash
       julia nn_main_cont.jl
      ```
      
-This code is adapted from https://github.com/frankhan91/DeepBSDE
+This code is adapted from https://github.com/frankhan91/DeepBSDE.
