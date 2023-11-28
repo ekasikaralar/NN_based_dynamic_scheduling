@@ -55,13 +55,13 @@ julia nn_main.jl
 - This code is structured to use GPU acceleration for faster computation. Please ensure that your system supports CUDA and has a compatible GPU.
 - Modify the 'config.json' file and the RUN_NAME (OLD_NAME) as per your specific requirements before running the script.
   
-- Additionally, we provide **nn_main_cont.jl**. This continuation code is designed for resuming or extending the training of a neural network from a previously saved state. This is crucial in scenarios where:
+- Additionally, we provide `nn_main_cont.jl`. This continuation code is designed for resuming or extending the training of a neural network from a previously saved state. This is crucial in scenarios where:
   - Long Training Durations: Initial training might have been interrupted or stopped due to time constraints or system limitations.
   - Refinement: After evaluating the performance of the initially trained model, you might identify the need for further training to refine the model's accuracy.
   
   ## How the Continuation Code Works
   - Loading Previous States: It starts by loading the neural network weights and optimizer states saved from a previous training session.
-  - Seed Adjustment: The random seed is set to a new value ('Random.seed!(74)'), ensuring that the new training phase introduces some variation in the training data.
+  - Seed Adjustment: The random seed is set to a new value (`Random.seed!(74)`), ensuring that the new training phase introduces some variation in the training data.
   - Adjustment of a_lowbound: We assume a_lowbound converges to 0.0 after an initial training.
 
   ## Usage
