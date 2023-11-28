@@ -25,7 +25,7 @@ This repository contains the codes for the computational method (Section 5), dat
 
 * Run [Test_Problems_Data_Analysis.ipynb](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/data/Test_Problems_Data_Analysis.ipynb) to generate system parameters.
 * Execute [nn_main.jl](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/bsde_solver/nn_main.jl) in [bsde_solver](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/bsde_solver) folder to solve the HJB equation and save neural network weights.
-* Simulate policy using [nn_sim.cpp](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/secondary_analysis/simulation_codes/nn_simulation/nn_sim.cpp) in [nn_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/nn_simulation) folder.
+* Simulate policy using `nn_sim.cpp` in [nn_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/nn_simulation) folder.
 
 ### To run experiments related to the benchmark policy generation for low dimensional problems in the paper
 
@@ -36,7 +36,7 @@ This repository contains the codes for the computational method (Section 5), dat
 ### To run experiments related to benchmark policy generation for high dimensional problems in the paper
 
 * Run [Test_Problems_Data_Analysis.ipynb](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/data/Test_Problems_Data_Analysis.ipynb) to generate system parameters.
-* Simulate the heuristic policies using `benchmark_sim.cpp` in [benchmark_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/benchmark_simulation).
+* Simulate the heuristic policies using `benchmark_sim.cpp` in [benchmark_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/benchmark_simulation) folder.
 
 ## Notes 
 For instructions on running the codes, please refer to the README files in each respective folder.
