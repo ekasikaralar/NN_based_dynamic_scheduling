@@ -25,7 +25,7 @@ To run this code, you need Julia (1.9) installed with the following packages:
 
 ## Configuration
 
-The 'config.json' file should contain two primary sections:
+The `config.json` file should contain two primary sections:
 
 1. 'neural_network_parameters': Specifies parameters like the learning rate, number of neurons, batch sizes, etc.
 2. 'system_parameters': Includes parameters related to the system that the neural network will interact with, such as service rates, cost rates, and other operational parameters.
@@ -66,7 +66,7 @@ julia nn_main.jl
 
   ## Usage
 
-  1. Set up the `OLD_NAME` and `RUN_NAME`: OLD_NAME should match the folder name containing the neural network weights and optimizer saved after the initial training. `RUN_NAME` should be the name of the folder for the continuation training.
+  1. Set up the `OLD_NAME` and `RUN_NAME`: `OLD_NAME` should match the folder name containing the neural network weights and optimizer saved after the initial training. `RUN_NAME` should be the name of the folder for the continuation training.
   2. Run the Script: Execute the script in Julia as follows:
       
      ```bash
