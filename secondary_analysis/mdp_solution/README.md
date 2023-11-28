@@ -13,7 +13,7 @@ This MATLAB code solves the 2D and 3D continuous-time Markov chain (CTMC) models
 `main` (main_2dim or main_3dim):
 - Initializes file paths for recording policies and value functions.
 - Reads configuration data from JSON and preprocesses the input data.
-- Calls 'runCTMC' to start the CTMC solution.
+- Calls `runCTMC` to start the CTMC solution.
 
 `defineConfig`:
 - Defines configuration settings and parameters
