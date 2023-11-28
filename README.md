@@ -25,13 +25,13 @@ This repository contains the codes for the computational method (Section 5), dat
 ### To run experiments related to neural network policy in the paper
 
 * Run `Test_Problems_Data_Analysis.ipynb` to generate system parameters.
-* Execute `nn_main.jl` to solve the HJB equation and save neural network weights.
+* Execute `nn_main.jl` in `bsde_solver` to solve the HJB equation and save neural network weights.
 * Simulate policy using `nn_sim.cpp` in `/secondary_analysis/simulation_codes/nn_simulation/`.
 
 ### To run experiments related to the benchmark policy generation for low dimensional problems in the paper
 
 * Run `Test_Problems_Data_Analysis.ipynb` to generate system parameters.
-* Run `main.m` code to solve the associated CTMC and save the optimal policies.
+* Run `main.m` in `/secondary_analysis/mdp_solution/` to solve the associated CTMC and save the optimal policies.
 * Simulate the optimal policy using `ctmc_sim.cpp` in `/secondary_analysis/simulation_codes/ctmc_simulation/`.
 
 ### To run experiments related to benchmark policy generation for high dimensional problems in the paper
