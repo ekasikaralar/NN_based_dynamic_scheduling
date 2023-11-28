@@ -11,7 +11,7 @@ We use this code to determine the static priority benchmarks for the main test p
 - `Execute` Class: This class manages the core logic of the discrete event simulation, including handling different events and updating the system state based on the specified static priority rule.
 
 ## Initialization
-- The 'Simulation' constructor initializes the simulation using a JSON configuration file. It contains key simulation parameters like num_interval, num_iterations, and file paths for various input data.
+- The `Simulation` constructor initializes the simulation using a JSON configuration file. It contains key simulation parameters like num_interval, num_iterations, and file paths for various input data.
 
 - Data Loading: Various parameters and data sets are loaded from CSV files. These include arrival rates (lambda), service rates (mu_hourly), and other operational parameters.
 
