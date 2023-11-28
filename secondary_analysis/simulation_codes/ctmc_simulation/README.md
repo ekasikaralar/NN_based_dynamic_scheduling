@@ -17,7 +17,7 @@ This solution is the benchmark policy for low dimensional test problems.
 
 ## Running the Simulation
 - `main` Function: Creates a `Simulation` object with the specified configuration file and runs the simulation.
-- Output: The 'save' method of the 'Simulation' class outputs the results to a CSV file, as specified by `record_file`.
+- Output: The `save` method of the 'Simulation' class outputs the results to a CSV file, as specified by `record_file`.
 
 ## Optimal Policy Calculation
 The simulation finds the optimal policies based on the current system state and time interval from an optimal policy matrix. This is managed by the `optimal_policy_calculation` function. We use the preemptive resume scheduling rule. Please refer to the [mdp_solution](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/mdp_solution ) folder for how we determine the optimal policy given state and time interval.
