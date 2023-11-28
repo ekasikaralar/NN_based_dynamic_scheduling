@@ -24,7 +24,7 @@ This repository contains the codes for the computational method (Section 5), dat
 ### To run experiments related to neural network policy in the paper
 
 * Run [Test_Problems_Data_Analysis.ipynb](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/data/Test_Problems_Data_Analysis.ipynb) to generate system parameters.
-* Execute [nn_main.jl](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/bsde_solver/nn_main.jl) in [bsde_solver](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/bsde_solver) folder to solve the HJB equation and save neural network weights.
+* Execute `nn_main.jl` in [bsde_solver](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/bsde_solver) folder to solve the HJB equation and save neural network weights.
 * Simulate policy using `nn_sim.cpp` in [nn_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/nn_simulation) folder.
 
 ### To run experiments related to the benchmark policy generation for low dimensional problems in the paper
