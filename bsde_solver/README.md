@@ -27,8 +27,8 @@ To run this code, you need Julia (1.9) installed with the following packages:
 
 The `config.json` file should contain two primary sections:
 
-1. 'neural_network_parameters': Specifies parameters like the learning rate, number of neurons, batch sizes, etc.
-2. 'system_parameters': Includes parameters related to the system that the neural network will interact with, such as service rates, cost rates, and other operational parameters.
+1. `neural_network_parameters`: Specifies parameters like the learning rate, number of neurons, batch sizes, etc.
+2. `system_parameters`: Includes parameters related to the system that the neural network will interact with, such as service rates, cost rates, and other operational parameters.
 
 
 ## Key Components of the Code
