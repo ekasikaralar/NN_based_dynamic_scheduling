@@ -6,7 +6,7 @@ This repository contains the codes for the computational method (Section 5), dat
 
 ### `data`:
   * `MayJulyWeekdays`: Data used to estimate system parameters. This data comes from the publicly available [US Bank Call Center dataset](https://see-center.iem.technion.ac.il/databases/USBank/) provided by the Service Enterprise Engineering Lab at Technion. 
-  * `[Test_Problems_Data_Analysis.ipynb](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/data/Test_Problems_Data_Analysis.ipynb)`: Jupyter Notebook for estimating system parameters for each customer class.
+  * [Test_Problems_Data_Analysis.ipynb](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/data/Test_Problems_Data_Analysis.ipynb): Jupyter Notebook for estimating system parameters for each customer class.
  
 ### `bsde_solver`:
    * The deep neural network code for solving the HJB equation in our stochastic control problem.
