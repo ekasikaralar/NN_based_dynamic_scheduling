@@ -10,6 +10,13 @@ Folders and their contents
   * `MayJulyWeekdays` is the data we use to estimate the system parameters. This data comes from the publicly available [US Bank Call Center dataset](https://see-center.iem.technion.ac.il/databases/USBank/) provided by the Service Enterprise Engineering Lab at Technion. 
   * `csv_export.py` is the code to export specific tables from database files (MDB format) to CSV files.
   * `Test_Problems_Data_Analysis.ipynb` is the Juypter Notebook to estimate the system parameters for each customer class in our queueing system.
-
+ 
+* `bsde_solver`: contains the deep neural network code for solving the HJB equation in our stochastic control problem.
+* `secondary_analysis`: contains the codes used to generate benchmark policies and simulate the neural network policy.
+   * `simulation_codes`:
+      * `nn_simulation`:
+      * `ctmc_simulation`:
+      * `benchmark_simulation`: 
+   * `mdp_solution`: contains the code used to solve the MDP in low dimensional test problems to generate the benchmark policy.
 
 
