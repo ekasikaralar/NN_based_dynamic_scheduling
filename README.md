@@ -9,8 +9,11 @@ This repository contains the codes for the computational method (Section 5), dat
   * `csv_export.py: Code for exporting database tables to CSV.
   * `Test_Problems_Data_Analysis.ipynb`: Jupyter Notebook for estimating system parameters for each customer class.
  
-* `bsde_solver`: contains the deep neural network code for solving the HJB equation in our stochastic control problem.
-* `secondary_analysis`: contains the codes used to generate benchmark policies and simulate the neural network policy.
+### `bsde_solver`
+   * The deep neural network code for solving the HJB equation in our stochastic control problem.
+
+### `secondary_analysis`: 
+   * Codes for generating benchmark policies and simulating the neural network policy.
    * `simulation_codes`:
       * `nn_simulation`: contains the C++ code used to simulate the policy proposed by the neural network. 
       * `ctmc_simulation`: contains the C++ code used to simulate the optimal policy given by the CTMC solution.
