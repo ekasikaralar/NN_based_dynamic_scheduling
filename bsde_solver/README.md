@@ -42,7 +42,7 @@ The `config.json` file should contain two primary sections:
 
 ## Usage
 
-1.  Set up Configuration File: Before running the code, please make sure that 'config.json' is correctly set up with all necessary parameters.
+1.  Set up Configuration File: Before running the code, please make sure that `config.json` is correctly set up with all necessary parameters.
 2.  Set up the `RUN_NAME`: The main training code (`nn_main.jl`) has a RUN_NAME variable used to specify the folder name to save the neural network weights and the optimizer state at the end of the training. Please change the `RUN_NAME` according to your setting.
 4.  Run the Script: Execute the script in a Julia environment. Specifically, run the command: 
 
