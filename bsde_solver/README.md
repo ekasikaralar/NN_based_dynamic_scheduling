@@ -43,7 +43,7 @@ The 'config.json' file should contain two primary sections:
 ## Usage
 
 1.  Set up Configuration File: Before running the code, please make sure that 'config.json' is correctly set up with all necessary parameters.
-2.  Set up the RUN_NAME: The main training code (nn_main.jl) has a RUN_NAME variable used to specify the folder name to save the neural network weights and the optimizer state at the end of the training. Please change the RUN_NAME according to your setting.
+2.  Set up the `RUN_NAME`: The main training code (`nn_main.jl`) has a RUN_NAME variable used to specify the folder name to save the neural network weights and the optimizer state at the end of the training. Please change the `RUN_NAME` according to your setting.
 4.  Run the Script: Execute the script in a Julia environment. Specifically, run the command: 
 
 ```bash
@@ -53,7 +53,7 @@ julia nn_main.jl
 ## Important Notes
 
 - This code is structured to use GPU acceleration for faster computation. Please ensure that your system supports CUDA and has a compatible GPU.
-- Modify the 'config.json' file and the RUN_NAME (OLD_NAME) as per your specific requirements before running the script.
+- Modify the 'config.json' file and the `RUN_NAME` (`OLD_NAME`) as per your specific requirements before running the script.
   
 - Additionally, we provide `nn_main_cont.jl`. This continuation code is designed for resuming or extending the training of a neural network from a previously saved state. This is crucial in scenarios where:
   - Long Training Durations: Initial training might have been interrupted or stopped due to time constraints or system limitations.
@@ -66,7 +66,7 @@ julia nn_main.jl
 
   ## Usage
 
-  1. Set up the OLD_NAME and RUN_NAME: OLD_NAME should match the folder name containing the neural network weights and optimizer saved after the initial training. RUN_NAME should be the name of the folder for the continuation training.
+  1. Set up the `OLD_NAME` and `RUN_NAME`: OLD_NAME should match the folder name containing the neural network weights and optimizer saved after the initial training. `RUN_NAME` should be the name of the folder for the continuation training.
   2. Run the Script: Execute the script in Julia as follows:
       
      ```bash
