@@ -14,7 +14,7 @@ This repository contains the codes for the computational method (Section 5), dat
 
 ### `secondary_analysis`: 
    * Codes for generating benchmark policies and simulating the neural network policy.
-   `simulation_codes`:
+   * `simulation_codes`:
       * `nn_simulation`: C++ code for simulating neural network policy. 
       * `ctmc_simulation`: C++ code for simulating the optimal CTMC solution policy.
       * `benchmark_simulation`: C++ code for simulating static priority rule benchmarks. 
