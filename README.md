@@ -28,12 +28,12 @@ This repository contains the codes for the computational method (Section 5), dat
 * Execute `nn_main.jl` in [bsde_solver](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/bsde_solver) folder to solve the HJB equation and save neural network weights.
 * Simulate policy using `nn_sim.cpp` in [nn_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/nn_simulation) folder.
 
-### To run experiments related to the benchmark policy generation for low dimensional problems in the paper
+### To run experiments related to the benchmark policy for low dimensional problems in the paper
 
 * Run `main.m` in [mdp_solution](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/mdp_solution) folder to solve the associated CTMC and save the optimal policies.
 * Simulate the optimal policy using `ctmc_sim.cpp` in [ctmc_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/ctmc_simulation) folder.
 
-### To run experiments related to benchmark policy generation for high dimensional problems in the paper
+### To run experiments related to benchmark policy for main test problem and high dimensional problems in the paper
 
 * Simulate the heuristic policies using `benchmark_sim.cpp` in [benchmark_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/benchmark_simulation) folder.
 
