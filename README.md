@@ -5,7 +5,7 @@ This repository contains the codes for the computational method (Section 5), dat
 ## Folders
 
 ### `data`:
-  * `MayJulyWeekdays`: Data used to estimate system parameters. This data comes from the publicly available [US Bank Call Center dataset](https://see-center.iem.technion.ac.il/databases/USBank/) provided by the Service Enterprise Engineering Lab at Technion. 
+  * [MayJulyWeekdays](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/data/MayJulyWeekdays): Data used to estimate system parameters. This data comes from the publicly available [US Bank Call Center dataset](https://see-center.iem.technion.ac.il/databases/USBank/) provided by the Service Enterprise Engineering Lab at Technion. 
   * [Test_Problems_Data_Analysis.ipynb](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/blob/main/data/Test_Problems_Data_Analysis.ipynb): Jupyter Notebook for estimating system parameters for each customer class.
  
 ### `bsde_solver`:
@@ -13,10 +13,10 @@ This repository contains the codes for the computational method (Section 5), dat
 
 ### `secondary_analysis`: 
    * Codes for generating benchmark policies and simulating the neural network policy.
-   * `simulation_codes`:
-      * `nn_simulation`: C++ code for simulating neural network policy. 
-      * `ctmc_simulation`: C++ code for simulating the optimal CTMC solution policy.
-      * `benchmark_simulation`: C++ code for simulating static priority rule benchmarks. 
+   * [simulation_codes](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes):
+      * [nn_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/nn_simulation): C++ code for simulating neural network policy. 
+      * [ctmc_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/ctmc_simulation): C++ code for simulating the optimal CTMC solution policy.
+      * [benchmark_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/benchmark_simulation): C++ code for simulating static priority rule benchmarks. 
    * `mdp_solution`: MATLAB Code for solving the associated CTMC in low dimensional test problems.
  
 ## Running Experiments
