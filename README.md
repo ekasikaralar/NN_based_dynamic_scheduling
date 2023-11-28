@@ -14,9 +14,9 @@ Folders and their contents
 * `bsde_solver`: contains the deep neural network code for solving the HJB equation in our stochastic control problem.
 * `secondary_analysis`: contains the codes used to generate benchmark policies and simulate the neural network policy.
    * `simulation_codes`:
-      * `nn_simulation`:
-      * `ctmc_simulation`:
-      * `benchmark_simulation`: 
-   * `mdp_solution`: contains the code used to solve the MDP in low dimensional test problems to generate the benchmark policy.
+      * `nn_simulation`: contains the C++ code used to simulate the policy proposed by the neural network. 
+      * `ctmc_simulation`: contains the C++ code used to simulate the optimal policy given by the CTMC solution.
+      * `benchmark_simulation`: contains the C++ code used to simulate the static priority rules used as the benchmark policies for the main and high dimensional test problems. 
+   * `mdp_solution`: contains the code used to solve the associated CTMC in low dimensional test problems to generate the benchmark policy.
 
 
