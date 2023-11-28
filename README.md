@@ -33,7 +33,7 @@ This repository contains the codes for the computational method (Section 5), dat
 * Run `main.m` in [mdp_solution](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/mdp_solution) folder to solve the associated CTMC and save the optimal policies.
 * Simulate the optimal policy using `ctmc_sim.cpp` in [ctmc_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/ctmc_simulation) folder.
 
-### To run experiments related to benchmark policies for main test problem and high dimensional problems in the paper
+### To run experiments related to benchmark policies for the main test problem and high dimensional problems in the paper
 
 * Simulate the heuristic policies using `benchmark_sim.cpp` in [benchmark_simulation](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/secondary_analysis/simulation_codes/benchmark_simulation) folder.
 
