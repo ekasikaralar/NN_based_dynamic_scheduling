@@ -18,7 +18,7 @@ This repository contains the codes for the computational method (Section 5), dat
       * `nn_simulation`: C++ code for simulating neural network policy. 
       * `ctmc_simulation`: C++ code for simulating the optimal CTMC solution policy.
       * `benchmark_simulation`: C++ code for simulating static priority rule benchmarks. 
-      * `mdp_solution`: Code for solving the associated CTMC in low dimensional test problems.
+   * `mdp_solution`: MATLAB Code for solving the associated CTMC in low dimensional test problems.
  
 ## Running Experiments
 
@@ -39,5 +39,6 @@ This repository contains the codes for the computational method (Section 5), dat
 * Run `Test_Problems_Data_Analysis.ipynb` to generate system parameters.
 * Simulate the heuristic policies using `benchmark_sim.cpp` in `/secondary_analysis/simulation_codes/benchmark_simulation/`.
 
-
+## Notes 
+For instructions on running the codes, please refer to the README files in each respective folder.
 
