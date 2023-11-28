@@ -7,8 +7,8 @@ This repository contains the source code for the discrete event simulations usin
 We use this code to determine the static priority benchmarks for the main test problem and the pathwise priority benchmark for the high dimensional test problems.
 
 ## Key Components
-- 'Simulation' Class: This class is responsible for setting up and running the simulation. It reads configuration settings from a JSON file.
-- 'Execute' Class: This class manages the core logic of the discrete event simulation, including handling different events and updating the system state based on the specified static priority rule.
+- `Simulation` Class: This class is responsible for setting up and running the simulation. It reads configuration settings from a JSON file.
+- `Execute` Class: This class manages the core logic of the discrete event simulation, including handling different events and updating the system state based on the specified static priority rule.
 
 ## Initialization
 - The 'Simulation' constructor initializes the simulation using a JSON configuration file. It contains key simulation parameters like num_interval, num_iterations, and file paths for various input data.
@@ -16,8 +16,8 @@ We use this code to determine the static priority benchmarks for the main test p
 - Data Loading: Various parameters and data sets are loaded from CSV files. These include arrival rates (lambda), service rates (mu_hourly), and other operational parameters.
 
 ## Running the Simulation
-- 'main' Function: Creates a 'Simulation' object with the specified configuration file and runs the simulation.
-- Output: The 'save' method of the 'Simulation' class outputs the results to a CSV file, as specified by 'record_file'.
+- `main` Function: Creates a `Simulation` object with the specified configuration file and runs the simulation.
+- Output: The 'save' method of the 'Simulation' class outputs the results to a CSV file, as specified by `record_file`.
 
 
 ## Priority Policy Calculation
@@ -25,7 +25,7 @@ The simulation includes several static priority rules 'c_mu_theta', 'c_mu_theta_
 
 
 ## Output
-The simulation calculates and outputs the costs incurred by customers waiting in the queue during a 17-hour daily operation at a call center. The num_iterations parameter determines the number of days simulated. We save the results to 'record_file'. 
+The simulation calculates and outputs the costs incurred by customers waiting in the queue during a 17-hour daily operation at a call center. The num_iterations parameter determines the number of days simulated. We save the results to `record_file`. 
 
 ## Technical Details
 
@@ -35,9 +35,9 @@ The simulation calculates and outputs the costs incurred by customers waiting in
 - OpenMP for parallel processing
 
 ### Structure
-- benchmark_sim.cpp: The main simulation code.
-- benchmark_sim.h: Header file for the simulation.
-- CMakeLists.txt: CMake configuration file for building the project.
+- `benchmark_sim.cpp`: The main simulation code.
+- `benchmark_sim.h`: Header file for the simulation.
+- `CMakeLists.txt`: CMake configuration file for building the project.
 
 ### Compilation and Running
 
