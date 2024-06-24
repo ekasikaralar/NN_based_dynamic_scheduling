@@ -318,14 +318,14 @@ z_nets = cpu.(global_model.deepnn_z)
 y_net = cpu(global_model.deepnn_y)
 
 for i in 1:NUM_TIME_INTERVAL
-    jldsave("logs_" * RUN_NAME * "/z$i.jld", model_state = Flux.state(z_nets[i]))
+    jldsave("logs_" * RUN_NAME * "/z$i.jld2", model_state = Flux.state(z_nets[i]))
 end
 
-jldsave("logs_" * RUN_NAME * "/y.jld", model_state = Flux.state(y_net))
+jldsave("logs_" * RUN_NAME * "/y.jld2", model_state = Flux.state(y_net))
 
 # saving the optimizer for retraining the neural network 
 
-@save "logs_" * RUN_NAME * "/final_optimizer.jld" optimizer
+@save "logs_" * RUN_NAME * "/final_optimizer.jld2" optimizer
 
 
 if !isdir("weights_" * RUN_NAME)
