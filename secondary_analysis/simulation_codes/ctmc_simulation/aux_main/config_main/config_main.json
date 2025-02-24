@@ -10,7 +10,7 @@
   "holding_cost_rate_path": "/main_test_auxiliary_mdp/data/holding_cost_17dim.csv",
   "abandonment_cost_rate_path": "/main_test_auxiliary_mdp/data/abandonment_cost_17dim.csv",
   "cost_rate_path": "/main_test_auxiliary_mdp/data/cost_17dim.csv",
-  "initialization_path": "/main_test_auxiliary_mdp/initialization_main.csv",
-  "upper_bound_path": "/main_test_auxiliary_mdp/upper_bound_main.csv",
+  "initialization_path": "/main_test_auxiliary_mdp/data/initialization_main.csv",
+  "upper_bound_path": "/main_test_auxiliary_mdp/data/upper_bound_main.csv",
   "policy_path": "/main_test_auxiliary_mdp/policy/"
 }
