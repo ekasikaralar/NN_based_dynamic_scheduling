@@ -4,7 +4,7 @@ namespace simulation {
 
 	Simulation::Simulation(const std::string& jsonFileName){
 
-		class_no = 17; //this simulation is designed for the 3 dimensional problems
+		class_no = 17; //this simulation is designed for the 17 dimensional problems
 
 		// Create a JSON object
     	nlohmann::json config;
