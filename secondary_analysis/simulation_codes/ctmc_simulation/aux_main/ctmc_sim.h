@@ -27,7 +27,7 @@
 #include <chrono>
 #include <omp.h>
 #include <random>
-#include </var2_test_auxiliary_mdp/include/nlohmann/json.hpp>
+#include </main_test_auxiliary_mdp/include/nlohmann/json.hpp>
 
 namespace simulation
 {
