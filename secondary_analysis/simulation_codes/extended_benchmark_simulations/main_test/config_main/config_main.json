@@ -1,0 +1,13 @@
+{
+  "num_interval": 204,
+  "num_iterations":10000,
+  "lambda_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/total_arrivals_partial.csv",
+  "agents_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/main_test_agents.csv",
+  "mu_hourly_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/mu_hourly_17dim.csv",
+  "theta_hourly_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/theta_hourly_17dim.csv",
+  "arr_cdf_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/cdf_17dim.csv",
+  "holding_cost_rate_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/hourly_holding_cost_17dim.csv",
+  "abandonment_cost_rate_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/abandonment_cost_17dim.csv",
+  "cost_rate_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/cost_17dim.csv",
+  "initialization_path": "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/data/initialization_main.csv"
+}
