@@ -177,7 +177,7 @@ namespace simulation {
 
 	int Simulation::save(){
         
-		for (int k = 145; k < 200; k++){
+		for (int k = 0; k < 625; k++){
 
 			std::string file_name_pol = "/main_test_auxiliary_mdp/policy" + std::to_string(k) + ".csv";
 
