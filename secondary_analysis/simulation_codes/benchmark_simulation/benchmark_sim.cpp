@@ -59,7 +59,7 @@ namespace simulation {
 		cost_rate = readVectorFromCSV(cost_rate_path); //hourly cost rate
 
 		// for pathwise optimal benchmarks of the high dimensional test problems
-		if (class_no == 30 || class_no == 50 || class_no == 100) {
+		if (class_no == 30 || class_no == 50 || class_no == 100 || class_no == 500) {
     			// Resize vectors to the size of class_no, using the first element as the fill value
    	 		mu_hourly.resize(class_no, mu_hourly.empty() ? 0 : mu_hourly[0]);
     			theta_hourly.resize(class_no, theta_hourly.empty() ? 0 : theta_hourly[0]);
@@ -357,7 +357,6 @@ namespace simulation {
 				if (diff[i] >= 0){
 					for (int j = 0; j < diff[i]; j++){
 						remove_queue(i);
-						t_depart = sim_clock + generate_service();
 					}
 				}
 				//if difference is negative, service for some people stops and they are sent back to queue to serve higher priority classes
@@ -373,8 +372,15 @@ namespace simulation {
      	 	for (int i = 0; i < class_no; i++){
      	 		num_in_service[0] += num_in_service[i + 1];
      	 	}
+
+		// Schedule the next departure
+		if (num_in_service[0] == 0) {
+    			t_depart = std::numeric_limits<double>::infinity();
+		} else {
+    			t_depart = sim_clock + generate_service();
+		}
 			
-			delete[] diff;
+		delete[] diff;
 	}
 	
 	/**
