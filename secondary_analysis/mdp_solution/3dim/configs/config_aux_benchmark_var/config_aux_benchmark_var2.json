@@ -8,7 +8,7 @@
 	"denominator": 3000,
 	"lambda_class1_path": "/project/Call_Center_Control/analyses_final/matlab/aux_benchmark_var2_test/arrivals_class1_partial.csv",
 	"lambda_class2_path": "/project/Call_Center_Control/analyses_final/matlab/aux_benchmark_var2_test/arrivals_class2_partial.csv",
-  "lambda_class3_path": "/project/Call_Center_Control/analyses_final/matlab/aux_benchmark_var2_test/arrivals_class3_partial.csv",
+  	"lambda_class3_path": "/project/Call_Center_Control/analyses_final/matlab/aux_benchmark_var2_test/arrivals_class3_partial.csv",
 	"agents_path": "/project/Call_Center_Control/analyses_final/matlab/aux_benchmark_var2_test/low_priority_agents.csv",
 	"mu_path": "/project/Call_Center_Control/analyses_final/matlab/aux_benchmark_var2_test/mu_hourly_aux_var2.csv",
 	"theta_path": "/project/Call_Center_Control/analyses_final/matlab/aux_benchmark_var2_test/theta_hourly_aux_var2.csv",
