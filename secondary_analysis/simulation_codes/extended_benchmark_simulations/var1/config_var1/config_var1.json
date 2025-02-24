@@ -1,0 +1,13 @@
+{
+  "num_interval": 204,
+  "num_iterations":10000,
+  "lambda_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/total_arrivals_partial.csv",
+  "agents_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/agents_ht.csv",
+  "mu_hourly_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/mu_hourly_var1.csv",
+  "theta_hourly_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/theta_hourly_var1.csv",
+  "arr_cdf_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/cdf_var1.csv",
+  "holding_cost_rate_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/holding_cost_var1.csv",
+  "abandonment_cost_rate_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/abandonment_cost_var1.csv",
+  "cost_rate_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/cost_hourly_var1.csv",
+  "initialization_path": "/home/ekasikar/var1_test_problem_benchmarks/static_benchmarks_alpha_beta/data/initialization_var1.csv"
+}
