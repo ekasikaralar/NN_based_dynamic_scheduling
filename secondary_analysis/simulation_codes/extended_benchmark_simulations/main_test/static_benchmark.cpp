@@ -4,7 +4,7 @@ namespace simulation {
 
 	Simulation::Simulation(const std::string& jsonFileName){
 
-		class_no = 17; //this simulation is designed for the 3 dimensional problems
+		class_no = 17; 
 
 		// Create a JSON object
     	nlohmann::json config;
@@ -181,7 +181,7 @@ namespace simulation {
 
         for (int k = 0; k < 125; k++){
 
-            std::string file_name_pol = "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/test_policy" + std::to_string(k) + ".csv";
+            std::string file_name_pol = "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/policy" + std::to_string(k) + ".csv";
             
             const char *path_pol = &file_name_pol[0];
             const int myfile_pol = open(path_pol, O_CREAT | O_WRONLY);
