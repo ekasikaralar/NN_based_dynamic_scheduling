@@ -34,8 +34,8 @@ def load_config(args):
 
 def prepare_directories(args):
 
-    os.makedirs(f"/scratch/midway3/ekasikar/final_config/logs_{args.run_name}", exist_ok = True)
-    os.makedirs(f"/scratch/midway3/ekasikar/final_config/cppweights_{args.run_name}", exist_ok = True)
+    os.makedirs(f"logs_{args.run_name}", exist_ok = True)
+    os.makedirs(f"cppweights_{args.run_name}", exist_ok = True)
 
 
 def main():
@@ -53,8 +53,8 @@ def main():
     final_iterations = config.net_config.final_iterations
     inner_iterations = config.net_config.inner_iterations
 
-    save_path_logs = f"/scratch/midway3/ekasikar/final_config/logs_{args.run_name}/"
-    save_path_cppweights = f"/scratch/midway3/ekasikar/final_config/cppweights_{args.run_name}/"
+    save_path_logs = f"logs_{args.run_name}/"
+    save_path_cppweights = f"cppweights_{args.run_name}/"
 
     training_history = dpsl_solver.train(final_iterations, inner_iterations, save_path_logs, save_path_cppweights)
     
