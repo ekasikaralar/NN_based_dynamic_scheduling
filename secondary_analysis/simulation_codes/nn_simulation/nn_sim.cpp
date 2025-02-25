@@ -1117,8 +1117,8 @@ namespace simulation {
 
 int main(int argc, char** argv){ 
 
-	std::string jsonFileName = "/home/ekasikar/low_dimensional_problems/3dim_var/nn_simulation_deep_splitting/config_3dim_var.json"; //the configuration file to initialize the simulation
-	std::string record_file = "/home/ekasikar/low_dimensional_problems/3dim_var/nn_simulation_deep_splitting/nn_policy_3dim_var.csv";  
+	std::string jsonFileName = "config.json"; //the configuration file to initialize the simulation
+	std::string record_file = "nn_policy.csv";  
 
 	simulation::Simulation simObj(jsonFileName);
     	simObj.save(record_file);	
