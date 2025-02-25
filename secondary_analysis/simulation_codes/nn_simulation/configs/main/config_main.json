@@ -1,1 +1,23 @@
+{
+    "class_no":17,
+    "num_interval":1020,
+    "num_iterations":10000,
+    "decision_freq":60,
+    "scaling_factor":400, 
+    "num_hidden_layers":4,
+    "activation_function":"LeakyReLU",
+    "leaky_relu_slope":0.01,
+    "lambda_path":"main_test_total_arrivals_partial_5min.csv",
+    "agents_path":"main_test_agents.csv",
+    "mu_hourly_path":"mu_hourly_17dim.csv",
+    "theta_hourly_path":"theta_hourly_17dim.csv",
+    "arr_cdf_path":"cdf_17dim.csv",
+    "holding_cost_rate_path":"hourly_holding_cost_17dim.csv",
+    "abandonment_cost_rate_path":"abandonment_cost_17dim.csv",
+    "cost_rate_path":"cost_17dim.csv",
+    "initialization_path":"initialization_main.csv",
+    "lambda_limit_path":"lambd_matrix_hourly_17dim.csv",
+    "nn_folder_name":"/home/ekasikar/cppweights_main_test_early_stopping/"
+}
+
 
