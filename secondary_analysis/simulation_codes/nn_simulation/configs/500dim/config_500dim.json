@@ -1,1 +1,23 @@
+{
+    "class_no":500,
+    "num_interval":1020,
+    "num_iterations":10000,
+    "decision_freq":300,
+    "scaling_factor":11765, 
+    "num_hidden_layers":4,
+    "activation_function":"LeakyReLU",
+    "leaky_relu_slope":0.2,
+    "lambda_path":"total_arrivals_partial_5min_500dim_pathwise.csv",
+    "agents_path":"agents_500dim_pathwise.csv",
+    "mu_hourly_path":"mu_hourly_500dim_pathwise.csv",
+    "theta_hourly_path":"theta_hourly_500dim_pathwise.csv",
+    "arr_cdf_path":"cdf_500dim.csv",
+    "holding_cost_rate_path":"hourly_holding_cost_500dim_pathwise.csv",
+    "abandonment_cost_rate_path":"abandonment_cost_500dim_pathwise.csv",
+    "cost_rate_path":"hourly_total_cost_500dim_pathwise.csv",
+    "initialization_path":"initialization_500dim.csv",
+    "lambda_limit_path":"hourly_limiting_lambda_500dim_pathwise.csv",
+    "nn_folder_name":"/home/ekasikar/cppweights_config_500dim_early_stopping_1020/"
+}
+
 
