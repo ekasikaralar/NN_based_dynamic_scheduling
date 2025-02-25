@@ -1,1 +1,14 @@
-
+{
+  "class_no": 17,
+  "num_interval": 204,
+  "num_iterations":10000,
+  "lambda_path": "total_arrivals_partial.csv",
+  "agents_path": "agents_ht.csv",
+  "mu_hourly_path": "mu_hourly_var2.csv",
+  "theta_hourly_path": "theta_hourly_var2.csv",
+  "arr_cdf_path": "cdf_var2.csv",
+  "holding_cost_rate_path": "holding_cost_var2.csv",
+  "abandonment_cost_rate_path": "abandonment_cost_var2.csv",
+  "cost_rate_path": "cost_hourly_var2.csv",
+  "initialization_path": "initialization_var2.csv"
+}
