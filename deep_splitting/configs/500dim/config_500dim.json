@@ -9,10 +9,10 @@
         "mu_file": "mu_hourly_500dim.csv",
         "theta_file": "theta_hourly_500dim.csv",
         "cost_file": "cost_500dim.csv",
-        "lambd_file": "hourly_limiting_lambda_500dim.csv",
-        "zeta_file": "hourly_zeta_500dim.csv",
-        "means_file": "minimal_1020_means.csv",
-        "stds_file": "minimal_1020_stds.csv"
+        "lambd_file": "hourly_limiting_lambda_500dim_pathwise.csv",
+        "zeta_file": "hourly_zeta_500dim_pathwise.csv",
+        "means_file": "minimal_1020_uniform_initialization_means.csv",
+        "stds_file": "minimal_1020_uniform_initialization_stds.csv"
     },
 
     "net_config": {
