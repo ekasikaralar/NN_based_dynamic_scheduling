@@ -27,7 +27,7 @@
 #include <map>
 #include <chrono>
 #include <omp.h>
-#include </home/ekasikar/var2_test_problem_benchmarks/static_benchmarks_alpha_beta/include/nlohmann/json.hpp>
+#include </home/ekasikar/include/nlohmann/json.hpp>
 
 namespace simulation
 {
