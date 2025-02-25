@@ -1,1 +1,23 @@
+{
+    "class_no":100,
+    "num_interval":1020,
+    "num_iterations":10000,
+    "decision_freq":60,
+    "scaling_factor":2353, 
+    "num_hidden_layers":4,
+    "activation_function":"LeakyReLU",
+    "leaky_relu_slope":0.4,
+    "lambda_path":"total_arrivals_partial_5min_100dim_var1.csv",
+    "agents_path":"adjusted_agents.csv",
+    "mu_hourly_path":"mu_hourly_100dim_var1.csv",
+    "theta_hourly_path":"theta_hourly_100dim_var1.csv",
+    "arr_cdf_path":"cdf_100dim_var1.csv",
+    "holding_cost_rate_path":"hourly_holding_cost_100dim_var1.csv",
+    "abandonment_cost_rate_path":"abandonment_cost_100dim_var1.csv",
+    "cost_rate_path":"hourly_total_cost_100dim_var1.csv",
+    "initialization_path":"initialization_100dim_var1.csv",
+    "lambda_limit_path":"hourly_limiting_lambda_100dim_var1.csv",
+    "nn_folder_name":"/home/ekasikar/cppweights_configs_1020int_4hidden/"
+}
+
 
