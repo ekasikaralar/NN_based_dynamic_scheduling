@@ -1,1 +1,44 @@
+{
+    "eqn_config": {
+       	"eqn_name": "HJB",
+	    "total_time": 17,
+        "dim": 3,
+        "num_time_interval":204,
+        "policy": "best",
+        "overtime_cost": 2.12,
+        "mu_file": "mu_hourly_3dim.csv",
+        "theta_file": "theta_hourly_3dim.csv",
+        "cost_file": "cost_3dim.csv",
+        "lambd_file": "lambd_matrix_hourly_3dim.csv",
+        "zeta_file": "zeta_matrix_hourly_3dim.csv",
+        "means_file": "best_3dim_204_means.csv",
+        "stds_file": "best_3dim_204_stds.csv"
+    },
+
+    "net_config": {
+        "final_learning_rate": 0.001,
+        "inner_learning_rate": 0.001,
+	    "final_iterations":4000,
+	    "inner_iterations":2000,	
+        "num_time_interval":204,
+        "print_interval":10,
+        "num_neurons":100,
+        "gamma": 0.1,
+        "a_lowbound": true,
+	    "final_milestones":[1000],
+        "inner_milestones":[1000,1500],
+        "early_stopping":true,
+        "grad_clip": false,
+        "grad_norm": 5,
+        "patience": 250,
+        "min_delta": 0.001,
+        "activation": "LeakyReLU",
+        "num_layers":3,  
+        "slope":0.01,    
+        "prev_init":false,
+        "lambd_const":0.001,
+	    "valid_size":4096,
+	    "batch_size":256
+    }
+}
 
