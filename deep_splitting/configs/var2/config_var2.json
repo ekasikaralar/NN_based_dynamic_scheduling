@@ -4,7 +4,7 @@
 	"total_time": 17,
         "dim": 17,
         "num_time_interval":3060,
-        "policy": "weighted_split_5class_w1",
+        "policy": "weighted_split_var2",
         "overtime_cost": 2.12,
         "mu_file": "mu_hourly_var2.csv",
         "theta_file": "theta_hourly_var2.csv",
