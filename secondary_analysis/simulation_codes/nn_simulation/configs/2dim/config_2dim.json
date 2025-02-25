@@ -17,6 +17,6 @@
     "cost_rate_path":"cost_2dim.csv",
     "initialization_path":"initialization_2dim.csv",
     "lambda_limit_path":"lambd_matrix_hourly_2dim.csv",
-    "nn_folder_name":"cppweights_config_2dim_early_stopping_best_204_2layers/"
+    "nn_folder_name":"/home/ekasikar/cppweights_config_2dim_early_stopping_best_204_2layers/"
 
 }
