@@ -7,7 +7,7 @@
     "num_hidden_layers":4,
     "activation_function":"LeakyReLU",
     "leaky_relu_slope":0.01,
-    "lambda_path":"main_test_total_arrivals_partial_5min.csv",
+    "lambda_path":"total_arrivals_partial.csv",
     "agents_path":"main_test_agents.csv",
     "mu_hourly_path":"mu_hourly_17dim.csv",
     "theta_hourly_path":"theta_hourly_17dim.csv",
