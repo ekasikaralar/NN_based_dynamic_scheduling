@@ -18,5 +18,4 @@
     "initialization_path":"initialization_3dim.csv",
     "lambda_limit_path":"lambd_matrix_hourly_3dim.csv",
     "nn_folder_name":"/home/ekasikar/cppweights_config_3dim_early_stopping_best_204_3layers/"
-
 }
