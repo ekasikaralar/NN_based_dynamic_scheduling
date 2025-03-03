@@ -6,13 +6,13 @@
         "num_time_interval":1020,
         "policy": "even",
         "overtime_cost": 2.12,
-        "mu_file": "/100dim_var1_nn/data/mu_hourly_100dim_var1.csv",
-        "theta_file": "/100dim_var1_nn/data/theta_hourly_100dim_var1.csv",
-        "cost_file": "/100dim_var1_nn/data/hourly_total_cost_100dim_var1.csv",
-        "lambd_file": "/100dim_var1_nn/data/hourly_limiting_lambda_100dim_var1.csv",
-        "zeta_file": "/100dim_var1_nn/data/hourly_zeta_100dim_var1.csv",
-        "means_file": "/100dim_var1_nn/even_1020_uniform_initialization_means.csv",
-        "stds_file": "/100dim_var1_nn/even_1020_uniform_initialization_stds.csv"
+        "mu_file": "/100dim_var2/data/mu_hourly_100dim_var2.csv",
+        "theta_file": "/100dim_var2/data/theta_hourly_100dim_var2.csv",
+        "cost_file": "/100dim_var2/data/hourly_total_cost_100dim_var2.csv",
+        "lambd_file": "/100dim_var2/data/hourly_limiting_lambda_100dim_var2.csv",
+        "zeta_file": "/100dim_var2/data/hourly_zeta_100dim_var2.csv",
+        "means_file": "/100dim_var2/even_1020_uniform_initialization_means.csv",
+        "stds_file": "/100dim_var2/even_1020_uniform_initialization_stds.csv"
     },
 
     "net_config": {
@@ -35,7 +35,7 @@
         "activation": "LeakyReLU",
         "num_layers":4,  
         "slope":0.4,    
-        "covar_multiplier":1,
+        "prev_init":true,
         "lambd_const":0.5,
 	    "valid_size":4096,
 	    "batch_size":256
