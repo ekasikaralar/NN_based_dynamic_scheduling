@@ -374,7 +374,6 @@ namespace simulation {
 				if (diff[i] >= 0){
 					for (int j = 0; j < diff[i]; j++){
 						remove_queue(i);
-						t_depart = sim_clock + generate_service();
 					}
 				}
 				//if the difference is negative, service for some people stops, and they are sent back to the queue to serve higher-priority classes
@@ -391,6 +390,12 @@ namespace simulation {
      	 			num_in_service[0] += num_in_service[i + 1];
      	 		}
 			
+			// Schedule the next departure
+			if (num_in_service[0] == 0) {
+    				t_depart = std::numeric_limits<double>::infinity();
+			} else {
+    				t_depart = sim_clock + generate_service();
+			}			
 			delete[] diff;
 	}
 
