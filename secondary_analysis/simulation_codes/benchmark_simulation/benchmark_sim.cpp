@@ -48,8 +48,8 @@ namespace simulation {
     		std::transform(agents.begin(), agents.end(), no_server.begin(), 
                    [](double val) { return static_cast<int>(val); });
 		
-		mu_hourly = readVectorFromCSV(mu_hourly_path); //hourly common service rate
-		theta_hourly = readVectorFromCSV(theta_hourly_path);  //hourly common abandonment rate
+		mu_hourly = readVectorFromCSV(mu_hourly_path); //hourly service rate
+		theta_hourly = readVectorFromCSV(theta_hourly_path);  //hourly abandonment rate
 
 		arr_cdf = readMatrixFromCSV(arr_cdf_path); //cumulative distribution function for the arrivals
 		holding_cost_rate = readVectorFromCSV(holding_cost_rate_path); //hourly holding cost rate
