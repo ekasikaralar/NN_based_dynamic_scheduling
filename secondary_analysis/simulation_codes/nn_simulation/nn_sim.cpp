@@ -26,13 +26,13 @@ namespace simulation {
     	file.close();
 
 		// Accessing configuration values
-    	class_no = config["class_no"]; //the dimension of the problem
-    	num_interval = config["num_interval"]; //the number of intervals we consider for neural networks
+    		class_no = config["class_no"]; //the dimension of the problem
+    		num_interval = config["num_interval"]; //the number of intervals we consider for neural networks
 		num_iterations = config["num_iterations"];
 		decision_freq = config["decision_freq"]; //decision frequency in seconds
 		scaling_factor = config["scaling_factor"]; //scaling factor to convert prelimit state to limiting state
-        num_hidden_layers = config["num_hidden_layers"]; //number of hidden layers used for the feedforward neural network
-        leaky_relu_slope = config["leaky_relu_slope"]; //the slope used if we use leaky relu activation function
+        	num_hidden_layers = config["num_hidden_layers"]; //number of hidden layers used for the feedforward neural network
+        	leaky_relu_slope = config["leaky_relu_slope"]; //the slope used if we use leaky relu activation function
 
 
 		std::string lambda_path = config["lambda_path"];
@@ -45,7 +45,7 @@ namespace simulation {
 		std::string cost_rate_path = config["cost_rate_path"];
 		std::string initialization_path = config["initialization_path"];
 		std::string lambda_limit_path = config["lambda_limit_path"];
-        activation_function = config["activation_function"];
+        	activation_function = config["activation_function"];
 		neural_network_folder_name = config["nn_folder_name"];//the name of the folder that has the neural network weights
 
 		lambda = readVectorFromCSV(lambda_path);  //per 5 minute arrival rates
@@ -450,7 +450,7 @@ namespace simulation {
 		lambda_trans = lambda_trans_;
 		num_interval = num_interval_;
 		decision_freq = decision_freq_;
-        scaling_factor = scaling_factor_;
+        	scaling_factor = scaling_factor_;
 		num_hidden_layers = num_hidden_layers_;
 		activation_function = activation_function_;
 		leaky_relu_slope = leaky_relu_slope_;
