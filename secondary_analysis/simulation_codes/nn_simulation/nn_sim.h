@@ -106,7 +106,7 @@ namespace simulation
 			std::vector<std::vector<float>> leaky_relu(const std::vector<std::vector<float>>& x);
 			std::vector<std::vector<float>> gelu(const std::vector<std::vector<float>>& x);
 			std::vector<std::vector<float>> selu(const std::vector<std::vector<float>>& x);
-			std::vector<std::vector<float>> celu(const std::vector<std::vector<float>>& x);
+			std::vector<std::vector<float>> elu(const std::vector<std::vector<float>>& x);
 			std::vector<std::vector<float>> apply_activation(const std::vector<std::vector<float>>& x);
 
 			std::vector<std::vector<float>> readMatrix(const std::string& filename);
