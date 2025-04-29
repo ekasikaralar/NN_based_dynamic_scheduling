@@ -303,7 +303,7 @@ namespace simulation {
 	    return result;
 	}
 
-	std::vector<std::vector<float> > MyNetwork::celu(const std::vector<std::vector<float> >& x) {
+	std::vector<std::vector<float> > MyNetwork::elu(const std::vector<std::vector<float> >& x) {
 		std::vector<std::vector<float> > result(x.size(), std::vector<float>(x[0].size(), 0));
 		
 		const float alpha = 1.0f;
@@ -409,8 +409,8 @@ namespace simulation {
             return gelu(x);
         } else if (activation_function == "SELU") {
             return selu(x);
-        } else if (activation_function == "CELU") {
-            return celu(x);
+        } else if (activation_function == "ELU") {
+            return elu(x);
         } else {
             return x; // Identity function (no activation)
         }
