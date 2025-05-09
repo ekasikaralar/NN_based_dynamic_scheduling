@@ -59,7 +59,7 @@ namespace simulation {
 		cost_rate = readVectorFromCSV(cost_rate_path); //hourly cost rate
 
 		// for pathwise optimal benchmarks of the high dimensional test problems
-		if (class_no == 30 || class_no == 50 || class_no == 100 || class_no == 500) {
+		if ((class_no == 30 || class_no == 50 || class_no == 100 || class_no == 500) && mu_hourly.size() == 1) {
     			// Resize vectors to the size of class_no, using the first element as the fill value
    	 		mu_hourly.resize(class_no, mu_hourly.empty() ? 0 : mu_hourly[0]);
     			theta_hourly.resize(class_no, theta_hourly.empty() ? 0 : theta_hourly[0]);
@@ -197,7 +197,7 @@ namespace simulation {
 		num_interval = num_interval_;
 		priority_rule = priority_rule_;
         
-      	generator.seed(seed);
+      		generator.seed(seed);
 		queue_init();
 
 	}
@@ -796,11 +796,11 @@ int main(int argc, char** argv){
     };
 
 
-	std::string jsonFileName = "/project/Call_Center_Control/analyses_final/static_benchmark/config.json"; //the configuration file to initialize the simulation
+	std::string jsonFileName = "/home/ekasikar/benchmark_simulation/config.json"; //the configuration file to initialize the simulation
 	
 	for (const auto& ruleConst : rules) {
 		std::string rule = ruleConst;  
-        std::string record_file = "/project/Call_Center_Control/analyses_final/static_benchmark/static_benchmark_" + rule + ".csv";  
+        std::string record_file = "/home/ekasikar/benchmark_simulation/static_benchmark_" + rule + ".csv";  
         simulation::Simulation simObj(jsonFileName, rule);
         simObj.save(record_file);
         std::cout << "Simulation completed for rule: " << rule << std::endl;
