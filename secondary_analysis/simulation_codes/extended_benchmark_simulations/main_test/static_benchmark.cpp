@@ -181,7 +181,7 @@ namespace simulation {
 
         for (int k = 0; k < 125; k++){
 
-            std::string file_name_pol = "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/policy" + std::to_string(k) + ".csv";
+            std::string file_name_pol = "/home/ekasikar/extended_benchmark_simulations/main_test/static_benchmarks_beta_alpha/policy" + std::to_string(k) + ".csv";
             
             const char *path_pol = &file_name_pol[0];
             const int myfile_pol = open(path_pol, O_CREAT | O_WRONLY);
@@ -221,7 +221,6 @@ namespace simulation {
     return 0;
 
     }
-
 
     Execute::Execute(int& class_no_,
         std::vector<std::vector<double>>& arr_cdf_,
@@ -344,11 +343,8 @@ namespace simulation {
 
 		std::vector<double> priority_order = high_priority_group;
 
-		//priority_order.insert(priority_order.end(), low_priority_group1.begin(), low_priority_group1.end()); //G_h > G_beta > G_alpha
-		//priority_order.insert(priority_order.end(), low_priority_group2.begin(), low_priority_group2.end()); 
-
-		priority_order.insert(priority_order.end(), low_priority_group2.begin(), low_priority_group2.end()); //G_h > G_alpha > G_beta
-		priority_order.insert(priority_order.end(), low_priority_group1.begin(), low_priority_group1.end());
+		priority_order.insert(priority_order.end(), low_priority_group1.begin(), low_priority_group1.end()); //G_h > G_beta > G_alpha
+		//priority_order.insert(priority_order.end(), low_priority_group2.begin(), low_priority_group2.end()); //G_h > G_alpha > G_beta
 
 		return priority_order;
 	}
@@ -713,8 +709,8 @@ namespace simulation {
 
 		priority_order = high_priority_group;
 
-		priority_order.insert(priority_order.end(), low_priority_group2.begin(), low_priority_group2.end()); //G_h > G_alpha > G_beta
-		priority_order.insert(priority_order.end(), low_priority_group1.begin(), low_priority_group1.end());
+		//priority_order.insert(priority_order.end(), low_priority_group2.begin(), low_priority_group2.end()); //G_h > G_alpha > G_beta
+		priority_order.insert(priority_order.end(), low_priority_group1.begin(), low_priority_group1.end()); //G_h > G_beta > G_alpha
 
 
     	constexpr double MaxTime = std::numeric_limits<double>::max();
@@ -825,7 +821,7 @@ namespace simulation {
 
 int main(int argc, char** argv){ 
 
-	std::string jsonFileName = "/home/ekasikar/main_test_problem_benchmarks/static_benchmarks_alpha_beta/config_main.json"; //the configuration file to initialize the simulation
+	std::string jsonFileName = "/home/ekasikar/extended_benchmark_simulations/main_test/config_main/config_main.json"; //the configuration file to initialize the simulation
 
 	simulation::Simulation simObj(jsonFileName);
     simObj.save();	
