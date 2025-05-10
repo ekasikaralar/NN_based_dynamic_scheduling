@@ -17,6 +17,6 @@
     "cost_rate_path":"/home/ekasikar/nn_simulations/var1/cost_hourly_var1.csv",
     "initialization_path":"/home/ekasikar/nn_simulations/var1/initialization_var1.csv",
     "lambda_limit_path":"/home/ekasikar/nn_simulations/var1/lambd_matrix_hourly_var1.csv",
-    "nn_folder_name":"/project/Call_Center_Control/analyses_final/nn_simulations/17dim_var4_left_end/cppweights_3060int_gelu_2000iterations_120patience_075pen_5class_w3_bs256_5hidden_lr5/"
+    "nn_folder_name":"/project/Call_Center_Control/analyses_final/nn_simulations/cppweights_3060int_gelu/"
 }
 
