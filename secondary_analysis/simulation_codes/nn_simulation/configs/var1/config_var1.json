@@ -7,16 +7,16 @@
     "num_hidden_layers":5,
     "activation_function":"GELU",
     "leaky_relu_slope":0,
-    "lambda_path":"total_arrivals_partial.csv",
-    "agents_path":"agents_ht.csv",
-    "mu_hourly_path":"mu_hourly_var1.csv",
-    "theta_hourly_path":"theta_hourly_var1.csv",
-    "arr_cdf_path":"cdf_var1.csv",
-    "holding_cost_rate_path":"holding_cost_var1.csv",
-    "abandonment_cost_rate_path":"abandonment_cost_var1.csv",
-    "cost_rate_path":"cost_hourly_var1.csv",
-    "initialization_path":"initialization_var1.csv",
-    "lambda_limit_path":"lambd_matrix_hourly_var1.csv",
-    "nn_folder_name":"/home/ekasikar/cppweights_3060int_gelu_5hidden/"
+    "lambda_path":"/home/ekasikar/nn_simulations/var1/total_arrivals_partial.csv",
+    "agents_path":"/home/ekasikar/nn_simulations/var1/agents_ht.csv",
+    "mu_hourly_path":"/home/ekasikar/nn_simulations/var1/mu_hourly_var1.csv",
+    "theta_hourly_path":"/home/ekasikar/nn_simulations/var1/theta_hourly_var1.csv",
+    "arr_cdf_path":"/home/ekasikar/nn_simulations/var1/cdf_var1.csv",
+    "holding_cost_rate_path":"/home/ekasikar/nn_simulations/var1/holding_cost_var1.csv",
+    "abandonment_cost_rate_path":"/home/ekasikar/nn_simulations/var1/abandonment_cost_var1.csv",
+    "cost_rate_path":"/home/ekasikar/nn_simulations/var1/cost_hourly_var1.csv",
+    "initialization_path":"/home/ekasikar/nn_simulations/var1/initialization_var1.csv",
+    "lambda_limit_path":"/home/ekasikar/nn_simulations/var1/lambd_matrix_hourly_var1.csv",
+    "nn_folder_name":"/project/Call_Center_Control/analyses_final/nn_simulations/17dim_var4_left_end/cppweights_3060int_gelu_2000iterations_120patience_075pen_5class_w3_bs256_5hidden_lr5/"
 }
 
