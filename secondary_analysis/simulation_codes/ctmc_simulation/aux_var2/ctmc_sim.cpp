@@ -179,7 +179,7 @@ namespace simulation {
         
 		for (int k = 0; k < 625; k++){
 
-			std::string file_name_pol = "/var2_test_auxiliary_mdp/policy" + std::to_string(k) + ".csv";
+			std::string file_name_pol = "/home/ekasikar/ctmc_simulation/aux_var2/policy" + std::to_string(k) + ".csv";
 
 			const char *path_pol = &file_name_pol[0];
 			const int myfile_pol = open(path_pol, O_CREAT | O_WRONLY);
@@ -356,41 +356,41 @@ namespace simulation {
 			}
 
 			// low priority group 1 
-			if (index[3] == "c_mu"){
+			if (index[1] == "c_mu"){
 				low_priority_group3 = {12, 14, 15, 16};
-			} else if (index[3] == "cost"){
+			} else if (index[1] == "cost"){
 				low_priority_group3 = {12, 14, 15, 16};
-			} else if (index[3] == "c_mu_theta"){
+			} else if (index[1] == "c_mu_theta"){
 				low_priority_group3 = {14, 16, 12, 15};
-			} else if (index[3] == "c_mu_theta_diff"){
+			} else if (index[1] == "c_mu_theta_diff"){
 				low_priority_group3 = {14, 16, 15, 12};
-			} else if (index[3] == "mu_theta_diff"){
+			} else if (index[1] == "mu_theta_diff"){
 				low_priority_group3 = {14, 16, 15, 12};
 			}
 
 			// low priority group 2
-			if (index[1] == "c_mu"){
+			if (index[2] == "c_mu"){
 				low_priority_group1 = {3, 13, 10, 7};
-			} else if (index[1] == "cost"){
+			} else if (index[2] == "cost"){
 				low_priority_group1 = {3, 13, 7, 10};
-			} else if (index[1] == "c_mu_theta"){
+			} else if (index[2] == "c_mu_theta"){
 				low_priority_group1 = {3, 7, 13, 10};
-			} else if (index[1] == "c_mu_theta_diff"){
+			} else if (index[2] == "c_mu_theta_diff"){
 				low_priority_group1 = {7, 10, 13, 3};
-			} else if (index[1] == "mu_theta_diff"){
+			} else if (index[2] == "mu_theta_diff"){
 				low_priority_group1 = {10, 7, 13, 3};
 			}
 
 			// low priority group 3
-			if (index[2] == "c_mu"){
+			if (index[3] == "c_mu"){
 				low_priority_group2 = {9, 11, 8};
-			} else if (index[2] == "cost"){
+			} else if (index[3] == "cost"){
 				low_priority_group2 = {9, 11, 8};
-			} else if (index[2] == "c_mu_theta"){
+			} else if (index[3] == "c_mu_theta"){
 				low_priority_group2 = {9, 8, 11};
-			} else if (index[2] == "c_mu_theta_diff"){
+			} else if (index[3] == "c_mu_theta_diff"){
 				low_priority_group2 = {8, 11, 9};
-			} else if (index[2] == "mu_theta_diff"){
+			} else if (index[3] == "mu_theta_diff"){
 				low_priority_group2 = {8, 9, 11};
 			}
 
@@ -904,7 +904,7 @@ namespace simulation {
 
 int main(int argc, char** argv){ 
 
-	std::string jsonFileName = "/var2_test_auxiliary_mdp/config_var2.json"; //the configuration file to initialize the simulation
+	std::string jsonFileName = "/home/ekasikar/ctmc_simulation/aux_var2/config_var2/config_var2.json"; //the configuration file to initialize the simulation
 
 	simulation::Simulation simObj(jsonFileName);
     simObj.save();	
