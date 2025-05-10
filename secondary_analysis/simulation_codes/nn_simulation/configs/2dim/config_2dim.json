@@ -7,16 +7,16 @@
     "num_hidden_layers":2,
     "activation_function":"LeakyReLU",
     "leaky_relu_slope":0.2,
-    "lambda_path":"total_arrivals_partial.csv",
-    "agents_path":"main_test_agents.csv",
-    "mu_hourly_path":"mu_hourly_2dim.csv",
-    "theta_hourly_path":"theta_hourly_2dim.csv",
-    "arr_cdf_path":"cdf_2dim.csv",
-    "holding_cost_rate_path":"holding_cost_2dim.csv",
-    "abandonment_cost_rate_path":"abandonment_cost_2dim.csv",
-    "cost_rate_path":"cost_2dim.csv",
-    "initialization_path":"initialization_2dim.csv",
-    "lambda_limit_path":"lambd_matrix_hourly_2dim.csv",
-    "nn_folder_name":"/home/ekasikar/cppweights_config_2dim_early_stopping_best_204_2layers/"
+    "lambda_path":"/home/ekasikar/nn_simulations/2dim/total_arrivals_partial.csv",
+    "agents_path":"/home/ekasikar/nn_simulations/2dim/main_test_agents.csv",
+    "mu_hourly_path":"/home/ekasikar/nn_simulations/2dim/mu_hourly_2dim.csv",
+    "theta_hourly_path":"/home/ekasikar/nn_simulations/2dim/theta_hourly_2dim.csv",
+    "arr_cdf_path":"/home/ekasikar/nn_simulations/2dim/cdf_2dim.csv",
+    "holding_cost_rate_path":"/home/ekasikar/nn_simulations/2dim/holding_cost_2dim.csv",
+    "abandonment_cost_rate_path":"/home/ekasikar/nn_simulations/2dim/abandonment_cost_2dim.csv",
+    "cost_rate_path":"/home/ekasikar/nn_simulations/2dim/cost_2dim.csv",
+    "initialization_path":"/home/ekasikar/nn_simulations/2dim/initialization_2dim.csv",
+    "lambda_limit_path":"/home/ekasikar/nn_simulations/2dim/lambd_matrix_hourly_2dim.csv",
+    "nn_folder_name":"/home/ekasikar/low_dimensional_problems/2dim/nn_simulation_deep_splitting/cppweights_config_2dim_early_stopping_best_204_2layers/"
 
 }
