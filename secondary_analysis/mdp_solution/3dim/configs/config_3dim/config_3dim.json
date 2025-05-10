@@ -5,7 +5,7 @@
 	"overtimeCost": 2.12,
 	"upperBounds": [211,211,211],
 	"numIntervals": 612000,
-	"denominator": 3000,
+	"denominator": 150,
 	"lambda_class1_path": "/project/Call_Center_Control/analyses_final/matlab/3dim/arrivals_class1_partial.csv",
 	"lambda_class2_path": "/project/Call_Center_Control/analyses_final/matlab/3dim/arrivals_class2_partial.csv",
     	"lambda_class3_path": "/project/Call_Center_Control/analyses_final/matlab/3dim/arrivals_class3_partial.csv",
