@@ -17,7 +17,7 @@
     "cost_rate_path":"/home/ekasikar/nn_simulations/main/cost_17dim.csv",
     "initialization_path":"/home/ekasikar/nn_simulations/main/initialization_main.csv",
     "lambda_limit_path":"/home/ekasikar/nn_simulations/main/lambd_matrix_hourly_17dim.csv",
-    "nn_folder_name":"/home/ekasikar/nn_simulations/cppweights_config_main_test_left_end_early_stopping_mindelta1e4_test/"
+    "nn_folder_name":"/home/ekasikar/nn_simulations/cppweights_config_main_test_early_stopping/"
 }
 
 
