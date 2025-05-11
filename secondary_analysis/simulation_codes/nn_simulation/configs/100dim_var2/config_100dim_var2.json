@@ -7,16 +7,16 @@
     "num_hidden_layers":4,
     "activation_function":"LeakyReLU",
     "leaky_relu_slope":0.4,
-    "lambda_path":"/100dim_var2_nn_sim/data/total_arrivals_partial_5min_100dim_var2.csv",
-    "agents_path":"/100dim_var2_nn_sim/data/adjusted_agents.csv",
-    "mu_hourly_path":"/100dim_var2_nn_sim/data/mu_hourly_100dim_var2.csv",
-    "theta_hourly_path":"/100dim_var2_nn_sim/data/theta_hourly_100dim_var2.csv",
-    "arr_cdf_path":"/100dim_var2_nn_sim/data/cdf_100dim.csv",
-    "holding_cost_rate_path":"/100dim_var2_nn_sim/data/hourly_holding_cost_100dim_var2.csv",
-    "abandonment_cost_rate_path":"/100dim_var2_nn_sim/data/abandonment_cost_100dim_var2.csv",
-    "cost_rate_path":"/100dim_var2_nn_sim/data/hourly_total_cost_100dim_var2.csv",
-    "initialization_path":"/100dim_var2_nn_sim/data/initialization_100dim_var2.csv",
-    "lambda_limit_path":"/100dim_var2_nn_sim/data/hourly_limiting_lambda_100dim_var2.csv",
-    "nn_folder_name":"/100dim_var2_nn_sim/cppweights_configs_1020int_lrelu4_2000iterations_100patience_05pen_even_bs256_4hidden_var2/"
+    "lambda_path":"/home/ekasikar/nn_simulations/100dim_var2/total_arrivals_partial_5min_100dim_var2.csv",
+    "agents_path":"/home/ekasikar/nn_simulations/100dim_var2/adjusted_agents.csv",
+    "mu_hourly_path":"/home/ekasikar/nn_simulations/100dim_var2/mu_hourly_100dim_var2.csv",
+    "theta_hourly_path":"/home/ekasikar/nn_simulations/100dim_var2/theta_hourly_100dim_var2.csv",
+    "arr_cdf_path":"/home/ekasikar/nn_simulations/100dim_var2/cdf_100dim_var2.csv",
+    "holding_cost_rate_path":"/home/ekasikar/nn_simulations/100dim_var2/hourly_holding_cost_100dim_var2.csv",
+    "abandonment_cost_rate_path":"/home/ekasikar/nn_simulations/100dim_var2/abandonment_cost_100dim_var2.csv",
+    "cost_rate_path":"/home/ekasikar/nn_simulations/100dim_var2/hourly_total_cost_100dim_var2.csv",
+    "initialization_path":"/home/ekasikar/nn_simulations/100dim_var2/initialization_100dim_var2.csv",
+    "lambda_limit_path":"/home/ekasikar/nn_simulations/100dim_var2/hourly_limiting_lambda_100dim_var2.csv",
+    "nn_folder_name":"/home/ekasikar/nn_simulations/cppweights_configs_1020int_var2/"
 }
 
