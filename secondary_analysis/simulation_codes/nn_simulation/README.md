@@ -7,7 +7,7 @@ This repository contains the source code for neural network-based discrete event
 ## Key Components
 - `Simulation` Class: This class is responsible for setting up and running the simulation. It reads configuration settings from a JSON file.
 - `Execute` Class: This class manages the core logic of the simulation, including handling different events and updating the system state based on the optimal priority rule determined by the neural networks.
-- `MyNetwork` Class: This class represents the neural network model to generate the gradient approximations. It loads the neural network weights (saved using the Julia code in the [deep_splitting](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/deep_splitting) folder) saved under 'neural_network_folder_name' and includes methods for forward propagation, batch normalization, and performing matrix operations.  
+- `MyNetwork` Class: This class represents the neural network model to generate the gradient approximations. It loads the neural network weights (saved using the PyTorch code in the [deep_splitting](https://github.com/ekasikaralar/NN_based_dynamic_scheduling/tree/main/deep_splitting) folder) saved under 'neural_network_folder_name' and includes methods for forward propagation and performing matrix operations.  
 
 ## Initialization
 - The `Simulation` constructor initializes the simulation using a JSON configuration file. It contains key simulation parameters like num_interval, num_iterations, and file paths for various input data.
